@@ -4,9 +4,9 @@ As barebones I'm willing to go. You probably don't want to use this.
 
 Featuring: 
 
-- Only 2 dependencies
+- Only 3 dependencies
 - Fast build times
-- Typescript and SASS support
+- Typescript, GLSL and SASS support
 
 ## How to develop :
 
@@ -27,4 +27,4 @@ npm run build
 
 to minify files, then deploy the `public` folder.
 
-This essentially uses the same script as the `dev` command, but runs it just once and outputs the bundle to `public/built`.
+This essentially uses the same script as the `dev` command, but runs it just once and outputs the minified bundle to `public/built`.
