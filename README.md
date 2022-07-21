@@ -4,7 +4,7 @@ As barebones I'm willing to go. You probably don't want to use this.
 
 Featuring: 
 
-- Only 3 dependencies
+- Few dependencies
 - Fast build times
 - Typescript, GLSL and SASS support
 
