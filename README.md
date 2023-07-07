@@ -14,8 +14,8 @@ Featuring:
 npm i && npm run dev
 ```
 
-By default, this will serve `public/index.html` using bundled `public/built/app.js` and `public/built/scss/`. 
-These are built from `/src/app.ts` and the server is hosted on `localhost:1234`. 
+By default, this will serve `public/index.html` using bundled `public/built/app.js` and `public/built/scss/`.<br/>
+These are built from `/src/app.ts` and the server is hosted on `localhost:1234`.<br/>
 Assets need to be fetched from the `/public` folder.
 
 These values are configurable in `watch.mjs` and through the `<script/>` tag in `index.html`.
