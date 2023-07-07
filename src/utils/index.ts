@@ -1,7 +1,7 @@
-export function ready(cb: Function) {
+export function callWhenReady(callback: Function) {
   if (document.readyState != 'loading') {
-    cb();
+    callback();
   } else {
-    document.addEventListener('DOMContentLoaded', (e) => cb());
+    document.addEventListener('DOMContentLoaded', (e) => callback());
   }
 }

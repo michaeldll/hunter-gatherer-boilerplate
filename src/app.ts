@@ -1,8 +1,17 @@
 import "./scss/global.scss";
-import { ready } from "./utils";
+import { callWhenReady } from "./utils";
+
+type Window = typeof window & {
+  IS_PRODUCTION: boolean;
+};
 
 const init = () => {
   console.log("ready");
+  
+  // Enable hot reloading in development
+  if (!(window as Window).IS_PRODUCTION) {
+    new EventSource('/esbuild').addEventListener('change', () => location.reload())
+  };
 };
 
-ready(init);
+callWhenReady(init);

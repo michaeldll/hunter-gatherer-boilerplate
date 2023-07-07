@@ -7,8 +7,13 @@ esbuild.build({
     sassPlugin({ type: "style" }),
     glsl({ minify: true })
   ],
-  minify: true,
   entryPoints: ["src/app.ts", "src/scss/global.scss"],
+  bundle: true,
   outdir: "public/built",
-  bundle: true
+  define: {
+    'window.IS_PRODUCTION': 'true',
+  },
+  minify: true,
 })
+
+console.log("build complete");
