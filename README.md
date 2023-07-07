@@ -1,12 +1,12 @@
 # hunter-gatherer boilerplate
 
-As barebones I'm willing to go. You probably don't want to use this.
+A Typescript and WebGL boilerplate. As barebones I'm willing to go.
 
-Featuring: 
+Featuring:
 
-- Few dependencies
-- Fast build times
+- Live reload
 - Typescript, GLSL and SASS support
+- Few dependencies and fast build times thanks to `esbuild`
 
 ## How to develop :
 
@@ -14,17 +14,15 @@ Featuring:
 npm i && npm run dev
 ```
 
-This will serve `public/index.html` using bundled `public/built/app.js` and `public/built/scss/` from `/src/app.ts` on `localhost:1234`.
+By default, this will serve `public/index.html` using bundled `public/built/app.js` and `public/built/scss/` from `/src/app.ts` on `localhost:1234`. Assets need to be fetched from the `public` folder.
 
-Assets need to be fetched from the `public` folder.
-
-It does not output the bundle to disk.
+These values are configurable in `watch.mjs` and through the <script/> tag in `index.html`.
 
 ## How to deploy
 ```
 npm run build
 ```
 
-to minify files, then deploy the `public` folder.
+This minifies files and shaders. You can then deploy the `public` folder.
 
-This essentially uses the same script as the `dev` command, but runs it just once and outputs the minified bundle to `public/built`.
+Settings are available in `build.mjs`
