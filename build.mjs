@@ -1,7 +1,7 @@
 import esbuild from "esbuild"
 import { glsl } from "esbuild-plugin-glsl";
 
-esbuild.build({
+await esbuild.build({
   plugins: [glsl({ minify: true })],
   entryPoints: ["src/app.ts"],
   bundle: true,

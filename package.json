@@ -5,18 +5,22 @@
   "main": "./src/app.ts",
   "scripts": {
     "build": "node build.mjs",
-    "dev": "node watch.mjs"
+    "dev": "node watch.mjs",
+    "typecheck": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/michaeldll/hunter-gatherer-boilerplate.git"
   },
   "author": "michael.dll",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/michaeldll/hunter-gatherer-boilerplate/issues"
   },
   "homepage": "https://github.com/michaeldll/hunter-gatherer-boilerplate#readme",
+  "engines": {
+    "node": "^22.0.0 || ^24.0.0 || ^26.0.0"
+  },
   "devDependencies": {
     "esbuild": "^0.28.2",
     "esbuild-plugin-glsl": "^1.4.2",

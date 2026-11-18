@@ -1,6 +1,6 @@
 # hunter-gatherer boilerplate
 
-A Typescript and WebGL boilerplate. As barebones I'm willing to go.
+A TypeScript and WebGL boilerplate. As barebones I'm willing to go.
 
 Featuring:
 
@@ -8,23 +8,31 @@ Featuring:
 - TypeScript and GLSL support
 - Few dependencies and fast build times thanks to `esbuild`
 
-## How to develop :
+## Development
 
+```sh
+npm ci
+npm run dev
 ```
-npm i && npm run dev
+
+Use Node.js 22, 24, or 26.
+
+The development server serves `public/index.html` at `http://localhost:1234`.
+The page loads `public/built/app.js`, which is bundled from `src/app.ts`.
+Files in `public` are served from the URL root.
+
+Set `PORT` to use a different port than 1234.
+
+```sh
+PORT=4321 npm run dev
 ```
 
-The development server runs on `localhost:1234` and serves `public/index.html`.<br/>
-The page loads `public/built/app.js`, which is bundled from `src/app.ts`.<br/>
-Assets need to be fetched from the `/public` folder.
+## Deployment
 
-These values are configurable in `watch.mjs` and through the `<script/>` tag in `index.html`.
-
-## How to deploy
-```
+```sh
 npm run build
 ```
 
 This minifies files and shaders. You can then deploy the `public` folder.
 
-Settings are available in `build.mjs`
+Build settings are available in `build.mjs`.

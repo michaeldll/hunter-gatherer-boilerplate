@@ -1,7 +1,10 @@
 import * as esbuild from 'esbuild'
 import { glsl } from "esbuild-plugin-glsl";
 
-let ctx = await esbuild.context({
+const portSetting = process.env.PORT ?? '1234'
+const requestedPort = Number(portSetting)
+
+const ctx = await esbuild.context({
   plugins: [glsl({ minify: false })],
   entryPoints: ['src/app.ts'],
   bundle: true,
@@ -13,9 +16,9 @@ let ctx = await esbuild.context({
 
 await ctx.watch()
 
-let { host, port } = await ctx.serve({
+const { port } = await ctx.serve({
   servedir: 'public',
-  port: 1234,
+  port: requestedPort,
 })
 
-console.log(`running on http://${host}:${port}`);
+console.log(`running on http://localhost:${port}`);
