@@ -1,4 +1,3 @@
-import "./scss/global.scss";
 import { callWhenReady } from "./utils";
 
 type Window = typeof window & {

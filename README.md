@@ -5,7 +5,7 @@ A Typescript and WebGL boilerplate. As barebones I'm willing to go.
 Featuring:
 
 - Live reload
-- Typescript, GLSL and SASS support
+- TypeScript and GLSL support
 - Few dependencies and fast build times thanks to `esbuild`
 
 ## How to develop :
@@ -14,8 +14,8 @@ Featuring:
 npm i && npm run dev
 ```
 
-By default, this will serve `public/index.html` using bundled `public/built/app.js` and `public/built/scss/`.<br/>
-These are built from `/src/app.ts` and the server is hosted on `localhost:1234`.<br/>
+The development server runs on `localhost:1234` and serves `public/index.html`.<br/>
+The page loads `public/built/app.js`, which is bundled from `src/app.ts`.<br/>
 Assets need to be fetched from the `/public` folder.
 
 These values are configurable in `watch.mjs` and through the `<script/>` tag in `index.html`.

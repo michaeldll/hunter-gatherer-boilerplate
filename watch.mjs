@@ -1,13 +1,9 @@
 import * as esbuild from 'esbuild'
-import { sassPlugin } from 'esbuild-sass-plugin'
 import { glsl } from "esbuild-plugin-glsl";
 
 let ctx = await esbuild.context({
-  plugins: [
-    sassPlugin({ type: "style" }),
-    glsl({ minify: false })
-  ],
-  entryPoints: ['src/app.ts', 'src/scss/global.scss'],
+  plugins: [glsl({ minify: false })],
+  entryPoints: ['src/app.ts'],
   bundle: true,
   outdir: 'public/built',
   define: {
